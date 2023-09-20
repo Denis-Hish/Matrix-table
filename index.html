@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Matrix table</title>
+   <link rel="stylesheet" href="css/style.css">
+
+   <!-- DataTables -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+   <script defer src="https://code.jquery.com/jquery-3.7.0.js"></script>
+   <script defer src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+   <script defer src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+   <script defer src="https://cdn.datatables.net/fixedcolumns/4.3.0/js/dataTables.fixedColumns.min.js"></script>
+
+   <script defer src="js/script.js"></script>
+</head>
+
+<body>
+   <div class="container">
+      <div class="ws-table">
+         <div class="ws-filter">
+            <div class="ws-filter-left">
+               <select id="ws-filter-unit" class="form-select" aria-label="Klub">
+                  <option value="0">Wszyscy</option>
+                  <option value="5">WS Barwinek</option>
+                  <option value="6">WS Senior Hoża</option>
+                  <option value="7">WS Senior JNJ</option>
+                  <option value="8">WS JNJ</option>
+                  <option value="9">WS Karczówkowska</option>
+                  <option value="10">WS Kostomłoty</option>
+                  <option value="12">WS Naruszewicza</option>
+                  <option value="13">WS Orla</option>
+                  <option value="14">WS Posłowicka</option>
+                  <option value="15">WS Senior Urzędnicza</option>
+                  <option value="16">WS Zagnańsk</option>
+                  <option value="17">WS Senior Żeromskiego</option>
+                  <option value="18">WS Żeromskiego</option>
+                  <option value="19">WS Grzymałków</option>
+               </select>
+
+               <select id="ws-filter-month" class="form-select" aria-label="Miesiąc">
+                  <option value="1">Styczeń</option>
+                  <option value="2">Luty</option>
+                  <option value="3">Marzec</option>
+                  <option value="4">Kwiecień</option>
+                  <option value="5">Maj</option>
+                  <option value="6">Czerwiec</option>
+                  <option value="7">Lipiec</option>
+                  <option value="8">Sierpień</option>
+                  <option value="9">Wrzesień</option>
+                  <option value="10">Październik</option>
+                  <option value="11">Listopad</option>
+                  <option value="12">Grudzień</option>
+               </select>
+
+               <select id="ws-filter-year" class="form-select" aria-label="Rok">
+                  <option value="2023" selected="selected">2023</option>
+                  <option value="2024">2024</option>
+               </select>
+            </div>
+
+            <div class="ws-filter-right">
+               <div class="balance">
+                  <div class="balance-for-the-month">
+                     Zostalo: <span>427.54</span> zł
+                  </div>
+                  <div class="balance-for-the-year">
+                     Zostalo: <span>1427.54</span> zł
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="ws-inputs">
+            <form class="add-user" action="">
+               <input type="text" name="username" placeholder="Forst name">
+               <input type="text" name="secondname" placeholder="Second name">
+               <button>Add</button>
+            </form>
+
+            <form class="add-invoice" action="">
+               <input type="number" name="invoice-month" placeholder="Add invoice">
+               <button>Add</button>
+            </form>
+         </div>
+
+         <div class="ws-table-container">
+            <table id="example" class="table">
+               <thead>
+                  <tr>
+                     <th class="first-name fixed">Imię</th>
+                     <th class="second-name fixed">Nazwisko</th>
+                     <th>1</th>
+                     <th>2</th>
+                     <th>3</th>
+                     <th>4</th>
+                     <th>5</th>
+                     <th>6</th>
+                     <th>7</th>
+                     <th>8</th>
+                     <th>9</th>
+                     <th>10</th>
+                     <th>11</th>
+                     <th>12</th>
+                     <th>13</th>
+                     <th>14</th>
+                     <th>15</th>
+                     <th>16</th>
+                     <th>17</th>
+                     <th>18</th>
+                     <th>19</th>
+                     <th>20</th>
+                     <th>21</th>
+                     <th>22</th>
+                     <th>23</th>
+                     <th>24</th>
+                     <th>25</th>
+                     <th>26</th>
+                     <th>27</th>
+                     <th>28</th>
+                     <th>29</th>
+                     <th>30</th>
+                     <th>31</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>Anakin</td>
+                     <td>Skywalker</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                  </tr>
+                  <tr>
+                     <td>Padme</td>
+                     <td>Amidala</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                  </tr>
+                  <tr>
+                     <td>Leia</td>
+                     <td>Organa</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                  </tr>
+                  <tr>
+                     <td>Han</td>
+                     <td>Solo</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                  </tr>
+                  <tr>
+                     <td>Obi-Wan</td>
+                     <td>Kenobi</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                     <td>4.57</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+
+      </div>
+   </div>
+
+</body>
+
+</html>
